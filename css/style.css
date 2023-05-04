@@ -1,0 +1,85 @@
+header {
+    background-color: black;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+  }
+.menu{
+    /* width: 100vh; */
+    background-color: #A9D6FF;
+    /* height: 100vh; */
+}
+.logo{
+    padding: 1px;
+}
+.title{
+    font-weight: normal;
+    font-size: 2rem;
+}
+.menu_a{
+    display: flex;
+    justify-content: space-between;
+    gap: 72px;
+    font-size: 1.25rem;
+}
+.menu_a li{
+    border-bottom: 4px solid transparent;
+    transition: border-color 1s;
+}
+.menu_a li:hover{
+    border-color: var(--primary-color);
+}
+.container-barra{
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    display: none;
+    align-items: center;
+    z-index: 2 ;
+    right: 30px;
+    top: 30px;
+    
+}
+
+.menu-barra, 
+.menu-barra::before,
+.menu-barra::after{
+    position: absolute;
+    content: "";
+    display: block;
+    background-color: #fff;
+    height: 4px;
+    width: 36px;
+    border-radius: 5px;
+    transition: all 1s;
+
+}
+
+.menu-barra::before{
+    transform: translateY(-10px);
+}
+
+.menu-barra::after {
+    transform: translateY(10px);
+}
+
+.container-barra.active  .menu-barra{
+    background-color: transparent;
+}
+
+.container-barra.active .menu-barra::before{
+    transform: rotate(45deg);
+}
+
+.container-barra.active .menu-barra::after {
+    transform: rotate(-45deg);
+}
+
+@media (max-width: 960px){
+    .container-barra{
+        display: flex;
+    }
+}
+
