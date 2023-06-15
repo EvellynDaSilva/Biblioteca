@@ -1,4 +1,4 @@
-var livros = [
+export var livros = [
     {
     "genero": "Tecnologia da Informação",
     "books": [

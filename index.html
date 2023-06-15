@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/card.css">
-
+    <script src="./js/index.js" defer type="module"></script>
     <title>Evellyn's Store</title>
 </head>
 
 <body>
+ 
     <header class="menu">
                 <img class="logo" src="./img/dia-mundial-do-livro 1.png" alt="logo">
             <h1 class="title">EVELLYN'S STORE</h1>
@@ -27,20 +28,43 @@
                     <li>
                         <a href="#HOME">HOME</a>
                     </li>
-                    <li>
-                        <a href="#COPYRIGHT">COPYRIGHT</a>
-                    </li>
+                    
                 </ul>
             </nav>
+            <div class="group">
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                  <g>
+                      <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
+                  </g>
+              </svg>
+              <input placeholder="Search" type="search" class="input">
+          </div>
     </header>
     <main>
+      <!-- <div class="container" id="container"></div>
         <div class="row">
             <div class="card ">
               <h2>Effective JavaScript</h2>
-              <p>.........</p>
-              <img class="image" src="img/image 1.png" alt="Effective JavaScript" />
+              
+             
+              <div class="image"><span class="text">This is a chair.</span></div>
+                <span class="title">Cool Chair</span>
+                <span class="price">$100</span>
+              </div> -->
+              <a href="Livro.html">
+              <div class="container" id="container">
+                <div class="card" id="card">
+                    <img id="card__image" src="./img/image 1.png" alt="" class="card_image">
+                    <h5 class="card_title" id="card_title"> Effective JavaScript</h5>
+                    <!-- <p class="card_description"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo, voluptates!</p> -->
+                    <span class="card_price" id="card_price"> R$ 200,00</span>
+                    <!-- <card-produto card__image="./img/" card__title="teste" card__description= "sdsds" card__price="R$ 200,00" ></card-produto> -->
+                
+                </div>
             </div>
-       
+            
+            </a>
+<!--        
             <div class="card ">
               <h2></h2>
               <p></p>
@@ -70,8 +94,11 @@
                 <p></p>
                 <img class="image" src="" alt="" />
               </div>
-          </div>
+          </div> -->
     </main>
+    <footer>
+      <p>Copyright ©️ | Todos os Direitos Reservados | Evellyn da Silva</p>
+    </footer>
 </body>
 
 </html>
