@@ -1,248 +1,209 @@
- header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 16px;
-  }
-.menu{
-    background-color: #A9D6FF;
-    height: 84px;
- } 
-.logo{
-    padding: 1px;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+  height: 10vh;
 }
-.title{
-    font-weight: normal;
-    font-size: 2rem;
+.menu {
+  background-color: #a9d6ff;
 }
-.menu_a{
-    display: flex;
-    justify-content: space-between;
-    gap: 72px;
-    font-size: 1.25rem;
+.logo {
+  padding: 1px;
 }
-.menu_a li{
-    border-bottom: 4px solid transparent;
-    transition: border-color 1s;
+.title {
+  font-weight: normal;
+  font-size: 2rem;
 }
-.menu_a li:hover{
-    border-color: var(--primary-color);
+.menu_a {
+  display: flex;
+  justify-content: space-between;
+  gap: 72px;
+  font-size: 1.25rem;
+}
+.menu_a li {
+  border-bottom: 4px solid transparent;
+  transition: border-color 1s;
+}
+.menu_a li:hover {
+  border-color: var(--primary-color);
+}
+
+main {
+  height: 80vh;
 }
 .group {
-    display: flex;
-    line-height: 28px;
-    align-items: center;
-    position: relative;
-    max-width: 190px;
-  }
-  
-  .input {
-    height: 40px;
-    line-height: 28px;
-    padding: 0 1rem;
-    width: 100%;
-    padding-left: 2.5rem;
-    border: 2px solid transparent;
-    border-radius: 8px;
-    outline: none;
-    background-color: #AED8FF;
-    color: #0d0c22;
-    box-shadow: 0 0 5px #a1ccf5, 0 0 0 10px #d5e1f1eb;
-    transition: .3s ease;
-  }
-  
-  .input::placeholder {
-    color: #777;
-  }
-  
-  .icon {
-    position: absolute;
-    left: 1rem;
-    fill: #777;
-    width: 1rem;
-    height: 1rem;
-  }
-a{
-    width: 11.875em;
-    height: 16.5em;
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  max-width: 190px;
+}
+
+.input {
+  height: 40px;
+  line-height: 28px;
+  padding: 0 1rem;
+  width: 100%;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  background-color: #aed8ff;
+  color: #0d0c22;
+  box-shadow: 0 0 5px #a1ccf5, 0 0 0 10px #d5e1f1eb;
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
+  color: #777;
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  fill: #777;
+  width: 1rem;
+  height: 1rem;
+}
+a {
+  width: 11.875em;
+  height: 16.5em;
 }
 p {
-    color: black;
-    margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    display: flex;
-    align-items: baseline;
-  }
-  .card {
-    position: relative;
-    width: 11.875em;
-    height: 16.5em;
-    box-shadow: 0px 1px 13px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: all 120ms;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-    padding: 0.5em;
-    padding-bottom: 3.4em;
-  }
-  
-  .card::after {
-    content: "ver mais!";
-    padding-top: 1.25em;
-    padding-left: 1.25em;
-    position: absolute;
-    left: 0;
-    bottom: -60px;
-    background: #A9D6FF;
-    color: #fff;
-    height: 2.5em;
-    width: 90%;
-    transition: all 80ms;
-    font-weight: 600;
-    text-transform: uppercase;
-    opacity: 0;
-  }
-  
-  .card .title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-    position: absolute;
-    left: 0.625em;
-    bottom: 1.875em;
-    font-weight: 400;
-    color: #000;
-  }
-  
-  .card .price {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 0.9em;
-    position: absolute;
-    left: 0.625em;
-    bottom: 0.625em;
-    color: #000;
-  }
-  
-  .card:hover::after {
-    bottom: 0;
-    opacity: 1;
-  }
-  
-  .card:active {
-    transform: scale(0.98);
-  }
-  
-  .card:active::after {
-    content: "Added !";
-    height: 3.125em;
-  }
-  
-  .text {
-    max-width: 55px;
-  }
-  
-  .image {
-    background: rgb(241, 241, 241);
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-  }
-
-/* .container-barra{
-    height: 36px;
-    width: 36px;
-    position: absolute;
-    display: none;
-    align-items: center;
-    z-index: 2 ;
-    right: 30px;
-    top: 30px;
-    
+  color: black;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  display: flex;
+  align-items: baseline;
 }
 
-.menu-barra, 
-.menu-barra::before,
-.menu-barra::after{
-    position: absolute;
-    content: "";
-    display: block;
-    background-color: #fff;
-    height: 4px;
-    width: 36px;
-    border-radius: 5px;
-    transition: all 1s;
-
+.container {
+  max-height: 80vh;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 
-.menu-barra::before{
-    transform: translateY(-10px);
+.card {
+  position: relative;
+  width: 11.875em;
+  height: 16.5em;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 120ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 0.5em;
+  padding-bottom: 3.4em;
 }
 
-.menu-barra::after {
-    transform: translateY(10px);
+.card::after {
+  content: "ver mais!";
+  padding-top: 1.25em;
+  padding-left: 1.25em;
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  background: #a9d6ff;
+  color: #fff;
+  height: 2.5em;
+  width: 90%;
+  transition: all 80ms;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0;
 }
 
-.container-barra.active  .menu-barra{
-    background-color: transparent;
+.card .title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 1.875em;
+  font-weight: 400;
+  color: #000;
 }
 
-.container-barra.active .menu-barra::before{
-    transform: rotate(45deg);
+.card .price {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 0.625em;
+  color: #000;
 }
 
-.container-barra.active .menu-barra::after {
-    transform: rotate(-45deg);
-} */
+.card:hover::after {
+  bottom: 0;
+  opacity: 1;
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.card:active::after {
+  content: "Added !";
+  height: 3.125em;
+}
+
+.text {
+  max-width: 55px;
+}
+
 footer {
-    background-color:#A9D6FF;
-    height: 100px;
+  background-color: #a9d6ff;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+}
+
+@media (max-width: 960px) {
+  .container-barra {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 16px;
   }
-
-@media (max-width: 960px){
-    .container-barra{
-        display: flex;
-    }
 }
 
- .card{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0px 0px 8px #0006;
-    padding: 16px;
-    cursor: pointer;
-
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px #0006;
+  padding: 16px;
+  cursor: pointer;
 }
 
-.card:hover{
-    box-shadow: 0px 0px 8px #00F6;
+.card:hover {
+  box-shadow: 0px 0px 8px #00f6;
 }
 
-.card__image{
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
+.card__image {
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: contain;
 }
 
-.card__title{
-    font-size: 1.5rem;
+.card__title {
+  font-size: 1.5rem;
 }
-.card__description{
-    font-size: 1rem;
+.card__description {
+  font-size: 1rem;
 }
-.card__price{
-    width: 100%;
-    font-size: 1.5rem;
-    font-weight: 900;
+.card__price {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 900;
 }

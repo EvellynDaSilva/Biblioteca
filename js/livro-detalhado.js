@@ -4,6 +4,11 @@ import livros from "../livros.js";
 
 const livrosArray = livros[0].books;
 
+const livroFiltrado = livrosArray.filter((livro) => {
+  return livro.isbn13 == localStorage.getItem("isbn");
+});
+console.log(livroFiltrado);
+
 const container = document.querySelector(".container");
 
 let card = document.createElement("a");
@@ -11,8 +16,12 @@ let card = document.createElement("a");
 let cardImage;
 let cardTitle;
 let cardPrice;
+let cardSubtitle;
+let cardUrl;
 
-livrosArray.forEach((livro) => {
+livroFiltrado.forEach((livro) => {
+  console.log(livro);
+
   card = document.createElement("a");
   card.setAttribute("href", "./livro.html");
   card.classList.add("card");
@@ -31,20 +40,6 @@ livrosArray.forEach((livro) => {
   cardPrice.classList.add("card__price");
 
   card.append(cardImage, cardTitle, cardPrice);
-  //   console.log(card);
 
   container.append(card);
-
-  //   -------------------------------------------------------------------
-
-  let isbnLivro;
-
-  const handleClick = function (event) {
-    isbnLivro = event.currentTarget.id;
-
-    localStorage.setItem("isbn", isbnLivro);
-    console.log("local", localStorage.getItem("isbn"));
-  };
-
-  card.addEventListener("click", handleClick);
 });
